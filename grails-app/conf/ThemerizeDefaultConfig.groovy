@@ -1,0 +1,1 @@
+grails.themerize.theme = 'themerize'
