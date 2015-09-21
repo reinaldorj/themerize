@@ -19,9 +19,6 @@ class PageItemsTagLib {
         if (!override) {
             template.plugin = grailsApplication.mergedConfig.grails.themerize.theme
         }
-        println grailsApplication.mergedConfig.grails.themerize.theme
-        println template.plugin
-        println override
         return template
     }
 
