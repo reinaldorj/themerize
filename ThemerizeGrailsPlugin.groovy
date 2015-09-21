@@ -1,5 +1,3 @@
-import grails.util.Environment
-
 class ThemerizeGrailsPlugin {
     // the plugin version
     def version = "0.1.0"
@@ -24,16 +22,4 @@ A Grails plugin that allow you to easily develop themes to your app.
     def issueManagement = [ system: "GITHUB", url: "https://github.com/willcrisis/themerize/issues" ]
 
     def scm = [ url: "https://github.com/willcrisis/themerize/" ]
-
-    def doWithSpring = {
-        mergeConfig(application)
-    }
-
-    protected mergeConfig(application) {
-        application.config.merge(loadConfig(application))
-    }
-
-    protected loadConfig(application) {
-        new ConfigSlurper(Environment.current.name).parse(application.classLoader.loadClass("ThemerizeDefaultConfig"))
-    }
 }

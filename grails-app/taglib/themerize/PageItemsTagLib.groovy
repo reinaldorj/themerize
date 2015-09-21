@@ -17,10 +17,22 @@ class PageItemsTagLib {
         Map<String, String> template = [path: path]
         def override = groovyPageLocator.findTemplateInBinding(path, pageScope)
         if (!override) {
-            template.plugin = grailsApplication.config.grails.themerize.theme
+            template.plugin = grailsApplication.mergedConfig.grails.themerize.theme
         }
+        println grailsApplication.mergedConfig.grails.themerize.theme
+        println template.plugin
+        println override
         return template
     }
+
+    /**
+     * Adiciona os recursos de CSS e Javascript à página
+     */
+    def resources = { attrs, body ->
+        def template = getTemplatePath('resources/resources')
+        out << render(template: template.path, model: [body: body], plugin: template.plugin)
+    }
+
 
     /**
      * Define o que será exibido nos breadcrumbs

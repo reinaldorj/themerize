@@ -44,5 +44,6 @@ grails.project.dependency.resolution = {
               ":rest-client-builder:2.1.0") {
             export = false
         }
+        compile ":plugin-config:0.2.1"
     }
 }

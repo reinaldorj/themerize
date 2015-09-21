@@ -16,7 +16,7 @@ class FieldsTagLib {
         Map<String, String> template = [path: path]
         def override = groovyPageLocator.findTemplateInBinding(path, pageScope)
         if (!override) {
-            template.plugin = grailsApplication.config.grails.themerize.theme
+            template.plugin = grailsApplication.mergedConfig.grails.themerize.theme
         }
         return template
     }
