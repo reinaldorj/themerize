@@ -1,25 +1,10 @@
 package themerize
 
-import org.codehaus.groovy.grails.web.pages.discovery.GrailsConventionGroovyPageLocator
-
 import static org.codehaus.groovy.grails.io.support.GrailsResourceUtils.appendPiecesForUri
 
-class ButtonsTagLib {
-    static namespace = 'thmrz'
+import org.codehaus.groovy.grails.web.pages.discovery.GrailsConventionGroovyPageLocator
 
-    def grailsApplication
-
-    GrailsConventionGroovyPageLocator groovyPageLocator
-
-    Map<String, String> getTemplatePath(String templateName) {
-        String path = appendPiecesForUri("/themerize", templateName)
-        Map<String, String> template = [path: path]
-        def override = groovyPageLocator.findTemplateInBinding(path, pageScope)
-        if (!override) {
-            template.plugin = grailsApplication.mergedConfig.grails.themerize.theme
-        }
-        return template
-    }
+class ButtonsTagLib extends AbstractTaglib {
 
     /**
      * Renderiza um botão do tipo submit

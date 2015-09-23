@@ -1,26 +1,11 @@
 package themerize
 
+import static org.codehaus.groovy.grails.io.support.GrailsResourceUtils.appendPiecesForUri
+
 import org.codehaus.groovy.grails.web.pages.discovery.GrailsConventionGroovyPageLocator
 import org.springframework.web.servlet.support.RequestContextUtils as RCU
 
-import static org.codehaus.groovy.grails.io.support.GrailsResourceUtils.appendPiecesForUri
-
-class PageItemsTagLib {
-    static namespace = 'thmrz'
-
-    def grailsApplication
-
-    GrailsConventionGroovyPageLocator groovyPageLocator
-
-    Map<String, String> getTemplatePath(String templateName) {
-        String path = appendPiecesForUri("/themerize", templateName)
-        Map<String, String> template = [path: path]
-        def override = groovyPageLocator.findTemplateInBinding(path, pageScope)
-        if (!override) {
-            template.plugin = grailsApplication.mergedConfig.grails.themerize.theme
-        }
-        return template
-    }
+class PageItemsTagLib extends AbstractTaglib {
 
     /**
      * Adiciona os recursos de CSS e Javascript à página
