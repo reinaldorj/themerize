@@ -1,5 +1,5 @@
 # Themerize
-A Grails plugin that allow you to easily develop themes to your app. 
+A Grails plugin that allows you to easily develop themes to your app. 
 
 ## 1. Installing
 Just add `runtime ":themerize:0.1.0"` to your `BuildConfig`.
