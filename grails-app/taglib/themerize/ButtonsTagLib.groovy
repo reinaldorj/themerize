@@ -1,9 +1,5 @@
 package themerize
 
-import static org.codehaus.groovy.grails.io.support.GrailsResourceUtils.appendPiecesForUri
-
-import org.codehaus.groovy.grails.web.pages.discovery.GrailsConventionGroovyPageLocator
-
 class ButtonsTagLib extends AbstractTaglib {
 
     /**

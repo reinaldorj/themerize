@@ -1,8 +1,5 @@
 package themerize
 
-import static org.codehaus.groovy.grails.io.support.GrailsResourceUtils.appendPiecesForUri
-
-import org.codehaus.groovy.grails.web.pages.discovery.GrailsConventionGroovyPageLocator
 import org.springframework.web.servlet.support.RequestContextUtils as RCU
 
 class PageItemsTagLib extends AbstractTaglib {
@@ -12,6 +9,7 @@ class PageItemsTagLib extends AbstractTaglib {
      */
     def resources = { attrs, body ->
         def template = getTemplatePath('resources/resources')
+        println template
         out << render(template: template.path, model: [body: body], plugin: template.plugin)
     }
 
