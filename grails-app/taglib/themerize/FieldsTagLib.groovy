@@ -1,25 +1,10 @@
 package themerize
 
-import org.codehaus.groovy.grails.web.pages.discovery.GrailsConventionGroovyPageLocator
-
 import static org.codehaus.groovy.grails.io.support.GrailsResourceUtils.appendPiecesForUri
 
-class FieldsTagLib {
-    static namespace = 'thmrz'
+import org.codehaus.groovy.grails.web.pages.discovery.GrailsConventionGroovyPageLocator
 
-    def grailsApplication
-
-    GrailsConventionGroovyPageLocator groovyPageLocator
-
-    Map<String, String> getTemplatePath(String templateName) {
-        String path = appendPiecesForUri("/themerize", templateName)
-        Map<String, String> template = [path: path]
-        def override = groovyPageLocator.findTemplateInBinding(path, pageScope)
-        if (!override) {
-            template.plugin = grailsApplication.mergedConfig.grails.themerize.theme
-        }
-        return template
-    }
+class FieldsTagLib extends AbstractTaglib {
 
     /**
      * Renderiza um campo de texto do tema instalado
@@ -384,4 +369,3 @@ class FieldsTagLib {
         out << render(template: template.path, model: [name: name, id: id, extensoes: extensoes, required: required], plugin: template.plugin)
     }
 }
-
