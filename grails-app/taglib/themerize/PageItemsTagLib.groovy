@@ -9,7 +9,6 @@ class PageItemsTagLib extends AbstractTaglib {
      */
     def resources = { attrs, body ->
         def template = getTemplatePath('resources/resources')
-        println template
         out << render(template: template.path, model: [body: body], plugin: template.plugin)
     }
 

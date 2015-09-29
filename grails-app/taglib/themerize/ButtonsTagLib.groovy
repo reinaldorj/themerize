@@ -3,7 +3,7 @@ package themerize
 class ButtonsTagLib extends AbstractTaglib {
 
     /**
-     * Renderiza um botão do tipo submit
+     * Renders a button type="submit" element
      *
      * @attr REQUIRED action Action a ser chamada
      * @attr id ID do elemento DOM
@@ -27,18 +27,17 @@ class ButtonsTagLib extends AbstractTaglib {
     }
 
     /**
-     * Renderiza um botão do tipo submit
+     * Renders a link element stylized like a button
      *
-     * @attr REQUIRED action Action a ser chamada
-     * @attr id ID do objeto a ser passado para o controlador
-     * @attr class Classe de estilo a ser aplicada
-     * @attr style Estilo a ser aplicado
-     * @attr value Texto do botão
-     * @attr controller Controlador para ser chamado
-     * @attr action Action para ser chamada
-     * @attr link Link para redirecionar
-     * @attr type Tipo do botão. Valores possíveis: default, primary, success, warning, danger, info
-     * @attr title Texto alternativo do botão
+     * @attr REQUIRED action Action to be called in controller
+     * @attr id Object ID to be included in URL
+     * @attr class
+     * @attr style
+     * @attr value
+     * @attr controller Controller to be called
+     * @attr link Redirect link
+     * @attr type Button type. Allowed values: default, primary, success, warning, danger, info
+     * @attr title
      */
     def linkButton = {attrs, body ->
         def template = getTemplatePath('buttons/linkButton')
@@ -46,5 +45,20 @@ class ButtonsTagLib extends AbstractTaglib {
         String value = attrs.remove('value')
         attrs.type = attrs.type ?: 'default'
         out << render(template: template.path, model: [attrs: attrs, body: body, value: value], plugin: template.plugin)
+    }
+
+    /**
+     * Renders a button type="button" element
+     *
+     * @attr id DOM object ID
+     * @attr class
+     * @attr style
+     * @attr value
+     * @attr type Button type. Allowed values: default, primary, success, warning, danger, info
+     * @attr title
+     */
+    def button = { attrs, body ->
+        def template = getTemplatePath('buttons/button')
+        out << render(template: template.path, model: [attrs: attrs, body: body], plugin: template.plugin)
     }
 }
