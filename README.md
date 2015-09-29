@@ -44,7 +44,7 @@ This tag will render a textField element with label using the style of your curr
 #### `<thmrz:textArea />`
 This tag will render a textField element using the style of your current theme. 
 
-### `<thmrz:textAreaLabel />`
+#### `<thmrz:textAreaLabel />`
 This tag will render a textArea element with label using the style of your current theme. 
 
 #### `<thmrz:dateField />`
