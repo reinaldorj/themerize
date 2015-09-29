@@ -49,7 +49,7 @@ This tag will render a textArea element with label using the style of your curre
 
 #### `<thmrz:dateField />`
 This tag will render a dateField element using the style of your current theme.
-This tag uses [Bootstrap Datetimepicker](https://tarruda.github.io/bootstrap-datetimepicker/). You can use it's documentation to make custom date formatting.
+It uses [Bootstrap Datetimepicker](https://tarruda.github.io/bootstrap-datetimepicker/). You can use it's documentation to make custom date formatting.
 
 #### `<thmrz:dateFieldLabel />`
 This tag will render a dateField element with label using the style of your current theme. 
