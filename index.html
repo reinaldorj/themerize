@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Themerize by willcrisis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Themerize</h1>
+      <h2 class="project-tagline">A Grails plugin that allow you to easily develop themes to your app.</h2>
+      <a href="https://github.com/willcrisis/themerize" class="btn">View on GitHub</a>
+      <a href="https://github.com/willcrisis/themerize/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/willcrisis/themerize/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="themerize" class="anchor" href="#themerize" aria-hidden="true"><span class="octicon octicon-link"></span></a>Themerize</h1>
+
+<p>A Grails plugin that allows you to easily develop themes to your app. </p>
+
+<h2>
+<a id="1-installing" class="anchor" href="#1-installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Installing</h2>
+
+<p>Just add <code>runtime ":themerize:0.1.0"</code> to your <code>BuildConfig</code>.
+If you want to use a different theme than the default one, you can override the plugin's template files (as described below) or install a plugin that contains the template files you want to use and override <code>grails.themerize.theme</code> in <code>Config.groovy</code> with theme name.</p>
+
+<h2>
+<a id="2-using" class="anchor" href="#2-using" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Using</h2>
+
+<p>This plugin contains a series of tags and template files that you can use to customize your application. Let's see which are them.</p>
+
+<h4>
+<a id="thmrzresources-" class="anchor" href="#thmrzresources-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:resources /&gt;</code>
+</h4>
+
+<p>This tag will include the Javascript and CSS resources to your page. It's recommended to use it in your <code>grails-app/views/layouts/main.gsp</code> file (or any other layout files you use).</p>
+
+<h4>
+<a id="thmrzbreadcrumbs-" class="anchor" href="#thmrzbreadcrumbs-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:breadcrumbs /&gt;</code>
+</h4>
+
+<p>This tag will render a container which will be used for rendering breadcrumbs. You must put <code>&lt;thmrz:breadcrumbItem&gt;</code>s tags inside it's body.</p>
+
+<h4>
+<a id="thmrzbreadcrumbitem-" class="anchor" href="#thmrzbreadcrumbitem-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:breadcrumbItem /&gt;</code>
+</h4>
+
+<p>This tag will render a breadcrumb item for your page. You must put this tag inside <code>&lt;thmrz:breadcrumbs&gt;</code> body.</p>
+
+<h4>
+<a id="thmrzsubmenu-" class="anchor" href="#thmrzsubmenu-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:submenu /&gt;</code>
+</h4>
+
+<p>This tag will render a container which will be used for rendering submenus into your views. You must put <code>&lt;thmrz:submenuItem&gt;</code>s tags inside it's body.</p>
+
+<h4>
+<a id="thmrzsubmenuitem-" class="anchor" href="#thmrzsubmenuitem-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:submenuItem /&gt;</code>
+</h4>
+
+<p>This tag will render a submenu item for your page. You must put this tag inside <code>&lt;thmrz:submenu&gt;</code> body.</p>
+
+<h4>
+<a id="thmrzsidebar-" class="anchor" href="#thmrzsidebar-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:sidebar /&gt;</code>
+</h4>
+
+<p>This tag will render a container which will be used for rendering sidebars into your views. You must put <code>&lt;thmrz:sidebarItem&gt;</code>s tags inside it's body.</p>
+
+<h4>
+<a id="thmrzsidebaritem-" class="anchor" href="#thmrzsidebaritem-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:sidebarItem /&gt;</code>
+</h4>
+
+<p>This tag will render a sidebar item for your page. You must put this tag inside <code>&lt;thmrz:sidebar&gt;</code> body. </p>
+
+<h4>
+<a id="thmrzsortablecolumn-" class="anchor" href="#thmrzsortablecolumn-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:sortableColumn /&gt;</code>
+</h4>
+
+<p>This tag will render a sortable column, just like <code>&lt;g:sortableColumn&gt;</code>, but stylized. </p>
+
+<h4>
+<a id="thmrzpaginate-" class="anchor" href="#thmrzpaginate-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:paginate /&gt;</code>
+</h4>
+
+<p>This tag will render a paginate element, just like <code>&lt;g:paginate&gt;</code>, but stylized. </p>
+
+<h4>
+<a id="thmrztextfield-" class="anchor" href="#thmrztextfield-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:textField /&gt;</code>
+</h4>
+
+<p>This tag will render a textField element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrztextfieldlabel-" class="anchor" href="#thmrztextfieldlabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:textFieldLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a textField element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrztextarea-" class="anchor" href="#thmrztextarea-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:textArea /&gt;</code>
+</h4>
+
+<p>This tag will render a textField element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrztextarealabel-" class="anchor" href="#thmrztextarealabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:textAreaLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a textArea element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzdatefield-" class="anchor" href="#thmrzdatefield-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:dateField /&gt;</code>
+</h4>
+
+<p>This tag will render a dateField element using the style of your current theme.<br>
+It uses <a href="https://tarruda.github.io/bootstrap-datetimepicker/">Bootstrap Datetimepicker</a>. You can use it's documentation to make custom date formatting.</p>
+
+<h4>
+<a id="thmrzdatefieldlabel-" class="anchor" href="#thmrzdatefieldlabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:dateFieldLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a dateField element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzselect-" class="anchor" href="#thmrzselect-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:select /&gt;</code>
+</h4>
+
+<p>This tag will render a select element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzselectlabel-" class="anchor" href="#thmrzselectlabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:selectLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a select element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzlocaleselect-" class="anchor" href="#thmrzlocaleselect-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:localeSelect /&gt;</code>
+</h4>
+
+<p>This tag will render a localeSelect element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzlocaleselectlabel-" class="anchor" href="#thmrzlocaleselectlabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:localeSelectLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a localeSelect element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrztimezoneselect-" class="anchor" href="#thmrztimezoneselect-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:timeZoneSelect /&gt;</code>
+</h4>
+
+<p>This tag will render a timeZoneSelect element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrztimezoneselectlabel-" class="anchor" href="#thmrztimezoneselectlabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:timeZoneSelectLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a timeZoneSelect element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzcurrencyselect-" class="anchor" href="#thmrzcurrencyselect-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:currencySelect /&gt;</code>
+</h4>
+
+<p>This tag will render a currencySelect element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzcurrencyselectlabel-" class="anchor" href="#thmrzcurrencyselectlabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:currencySelectLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a currencySelect element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzfield-" class="anchor" href="#thmrzfield-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:field /&gt;</code>
+</h4>
+
+<p>This tag will render a field element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzfieldlabel-" class="anchor" href="#thmrzfieldlabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:fieldLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a field element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzcheckbox-" class="anchor" href="#thmrzcheckbox-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:checkBox /&gt;</code>
+</h4>
+
+<p>This tag will render a checkBox element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzcheckboxlabel-" class="anchor" href="#thmrzcheckboxlabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:checkBoxLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a checkBox element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzpasswordfield-" class="anchor" href="#thmrzpasswordfield-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:passwordField /&gt;</code>
+</h4>
+
+<p>This tag will render a passwordField element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzpasswordfieldlabel-" class="anchor" href="#thmrzpasswordfieldlabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:passwordFieldLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a passwordField element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzuploadfield-" class="anchor" href="#thmrzuploadfield-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:uploadField /&gt;</code>
+</h4>
+
+<p>This tag will render a uploadField element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzuploadfieldlabel-" class="anchor" href="#thmrzuploadfieldlabel-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:uploadFieldLabel /&gt;</code>
+</h4>
+
+<p>This tag will render a uploadField element with label using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzsubmitbutton-" class="anchor" href="#thmrzsubmitbutton-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:submitButton /&gt;</code>
+</h4>
+
+<p>This tag will render a submit button element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzresetbutton-" class="anchor" href="#thmrzresetbutton-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:resetButton /&gt;</code>
+</h4>
+
+<p>This tag will render a reset button element using the style of your current theme. </p>
+
+<h4>
+<a id="thmrzlinkbutton-" class="anchor" href="#thmrzlinkbutton-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:linkButton /&gt;</code>
+</h4>
+
+<p>This tag will render a link styled like a button using the style of your current theme.</p>
+
+<h4>
+<a id="thmrzbutton-" class="anchor" href="#thmrzbutton-" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>&lt;thmrz:button /&gt;</code>
+</h4>
+
+<p>This tag will render a simple button element using the style of your current theme.</p>
+
+<h2>
+<a id="3-customizing" class="anchor" href="#3-customizing" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Customizing</h2>
+
+<p>If you want, you can override the template gsps used to render elements. They need to be under <code>grails-app/views/themerize</code>. Just create this folder and implement the files as you need. You'll want to implement these files:<br>
+<code>breadcrumbs/_breadcrumbs.gsp</code><br>
+<code>breadcrumbs/_breadcrumbItem.gsp</code><br>
+<code>buttons/_linkButton.gsp</code><br>
+<code>buttons/_resetButton.gsp</code><br>
+<code>buttons/_submitButton.gsp</code><br>
+<code>fields/_checkBox.gsp</code><br>
+<code>fields/_checkBoxLabel.gsp</code><br>
+<code>fields/_currencySelect.gsp</code><br>
+<code>fields/_currencySelectLabel.gsp</code><br>
+<code>fields/_dateField.gsp</code><br>
+<code>fields/_dateFieldLabel.gsp</code><br>
+<code>fields/_field.gsp</code><br>
+<code>fields/_fieldLabel.gsp</code><br>
+<code>fields/_localeSelect.gsp</code><br>
+<code>fields/_localeSelectLabel.gsp</code><br>
+<code>fields/_passwordField.gsp</code><br>
+<code>fields/_passwordFieldLabel.gsp</code><br>
+<code>fields/_select.gsp</code><br>
+<code>fields/_selectLabel.gsp</code><br>
+<code>fields/_textArea.gsp</code><br>
+<code>fields/_textAreaLabel.gsp</code><br>
+<code>fields/_textField.gsp</code><br>
+<code>fields/_textFieldLabel.gsp</code><br>
+<code>fields/_timeZoneSelect.gsp</code><br>
+<code>fields/_timeZoneSelectLabel.gsp</code><br>
+<code>fields/_uploadField.gsp</code><br>
+<code>fields/_uploadFieldLabel.gsp</code><br>
+<code>paginate/_currentStep.gsp</code><br>
+<code>paginate/_firstStep.gsp</code><br>
+<code>paginate/_lastStep.gsp</code><br>
+<code>paginate/_next.gsp</code><br>
+<code>paginate/_nextDisabled.gsp</code><br>
+<code>paginate/_paginateStep.gsp</code><br>
+<code>paginate/_previous.gsp</code><br>
+<code>paginate/_previousDisabled.gsp</code><br>
+<code>resources/_resources.gsp</code><br>
+<code>sidebar/_sidebar.gsp</code><br>
+<code>sidebar/_sidebarItem.gsp</code><br>
+<code>sortableColumn/_sortableColumn.gsp</code><br>
+<code>submenu/_submenu.gsp</code><br>
+<code>submenu/submenuItem.gsp</code>   </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/willcrisis/themerize">Themerize</a> is maintained by <a href="https://github.com/willcrisis">willcrisis</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
