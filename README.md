@@ -48,7 +48,7 @@ This tag will render a textField element using the style of your current theme.
 This tag will render a textArea element with label using the style of your current theme. 
 
 #### `<thmrz:dateField />`
-This tag will render a dateField element using the style of your current theme.
+This tag will render a dateField element using the style of your current theme.   
 It uses [Bootstrap Datetimepicker](https://tarruda.github.io/bootstrap-datetimepicker/). You can use it's documentation to make custom date formatting.
 
 #### `<thmrz:dateFieldLabel />`
@@ -115,86 +115,45 @@ This tag will render a link styled like a button using the style of your current
 This tag will render a simple button element using the style of your current theme.
 
 ## 3. Customizing
-If you want, you can override the template gsps used to render elements. They need to be under `grails-app/views/themerize`. Just create this folder and implement the files as you need. You'll want to implement these files:
-
-`breadcrumbs/_breadcrumbs.gsp`
-
-`breadcrumbs/_breadcrumbItem.gsp`
-
-`buttons/_linkButton.gsp`
-
-`buttons/_resetButton.gsp`
-
-`buttons/_submitButton.gsp`
-
-`fields/_checkBox.gsp`
-
-`fields/_checkBoxLabel.gsp`
-
-`fields/_currencySelect.gsp`
-
-`fields/_currencySelectLabel.gsp`
-
-`fields/_dateField.gsp`
-
-`fields/_dateFieldLabel.gsp`
-
-`fields/_field.gsp`
-
-`fields/_fieldLabel.gsp`
-
-`fields/_localeSelect.gsp`
-
-`fields/_localeSelectLabel.gsp`
-
-`fields/_passwordField.gsp`
-
-`fields/_passwordFieldLabel.gsp`
-
-`fields/_select.gsp`
-
-`fields/_selectLabel.gsp`
-
-`fields/_textArea.gsp`
-
-`fields/_textAreaLabel.gsp`
-
-`fields/_textField.gsp`
-
-`fields/_textFieldLabel.gsp`
-
-`fields/_timeZoneSelect.gsp`
-
-`fields/_timeZoneSelectLabel.gsp`
-
-`fields/_uploadField.gsp`
-
-`fields/_uploadFieldLabel.gsp`
-
-`paginate/_currentStep.gsp`
-
-`paginate/_firstStep.gsp`
-
-`paginate/_lastStep.gsp`
-
-`paginate/_next.gsp`
-
-`paginate/_nextDisabled.gsp`
-
-`paginate/_paginateStep.gsp`
-
-`paginate/_previous.gsp`
-
-`paginate/_previousDisabled.gsp`
-
-`resources/_resources.gsp`
-
-`sidebar/_sidebar.gsp`
-
-`sidebar/_sidebarItem.gsp`
-
-`sortableColumn/_sortableColumn.gsp`
-
-`submenu/_submenu.gsp`
-
-`submenu/submenuItem.gsp`
+If you want, you can override the template gsps used to render elements. They need to be under `grails-app/views/themerize`. Just create this folder and implement the files as you need. You'll want to implement these files:   
+`breadcrumbs/_breadcrumbs.gsp`   
+`breadcrumbs/_breadcrumbItem.gsp`   
+`buttons/_linkButton.gsp`   
+`buttons/_resetButton.gsp`   
+`buttons/_submitButton.gsp`   
+`fields/_checkBox.gsp`   
+`fields/_checkBoxLabel.gsp`   
+`fields/_currencySelect.gsp`   
+`fields/_currencySelectLabel.gsp`   
+`fields/_dateField.gsp`   
+`fields/_dateFieldLabel.gsp`   
+`fields/_field.gsp`   
+`fields/_fieldLabel.gsp`   
+`fields/_localeSelect.gsp`   
+`fields/_localeSelectLabel.gsp`   
+`fields/_passwordField.gsp`   
+`fields/_passwordFieldLabel.gsp`   
+`fields/_select.gsp`   
+`fields/_selectLabel.gsp`   
+`fields/_textArea.gsp`   
+`fields/_textAreaLabel.gsp`   
+`fields/_textField.gsp`   
+`fields/_textFieldLabel.gsp`   
+`fields/_timeZoneSelect.gsp`   
+`fields/_timeZoneSelectLabel.gsp`   
+`fields/_uploadField.gsp`   
+`fields/_uploadFieldLabel.gsp`   
+`paginate/_currentStep.gsp`   
+`paginate/_firstStep.gsp`   
+`paginate/_lastStep.gsp`   
+`paginate/_next.gsp`   
+`paginate/_nextDisabled.gsp`   
+`paginate/_paginateStep.gsp`   
+`paginate/_previous.gsp`   
+`paginate/_previousDisabled.gsp`   
+`resources/_resources.gsp`   
+`sidebar/_sidebar.gsp`   
+`sidebar/_sidebarItem.gsp`   
+`sortableColumn/_sortableColumn.gsp`   
+`submenu/_submenu.gsp`   
+`submenu/submenuItem.gsp`   
