@@ -5,7 +5,7 @@ import org.springframework.web.servlet.support.RequestContextUtils as RCU
 class PageItemsTagLib extends AbstractTaglib {
 
     /**
-     * Adiciona os recursos de CSS e Javascript à página
+     * Adds CSS and Javascript resources to the page.
      */
     def resources = { attrs, body ->
         def template = getTemplatePath('resources/resources')
@@ -14,7 +14,15 @@ class PageItemsTagLib extends AbstractTaglib {
 
 
     /**
-     * Define o que será exibido nos breadcrumbs
+     * Renders a container to put breadcrumbs. No body is needed.
+     */
+    def breadcrumbsContainer = { attrs, body ->
+        def template = getTemplatePath('breadcrumbs/breadcrumbsContainer')
+        out << render(template: template.path, plugin: template.plugin)
+    }
+
+    /**
+     * Renders it's contents inside the breadcrumb container. Use it anywhere you want.
      */
     def breadcrumbs = { attrs, body ->
         def template = getTemplatePath('breadcrumbs/breadcrumbs')
@@ -22,7 +30,7 @@ class PageItemsTagLib extends AbstractTaglib {
     }
 
     /**
-     * Renderiza um item de breadcrumb
+     * Renders a breadcrumb item.
      */
     def breadcrumbItem = {attrs, body ->
         def template = getTemplatePath('breadcrumbs/breadcrumbItem')
@@ -30,7 +38,7 @@ class PageItemsTagLib extends AbstractTaglib {
     }
 
     /**
-     * Renderiza o submenu
+     * Renders a submenu
      */
     def submenu = { attrs, body ->
         def template = getTemplatePath('submenus/submenu')
@@ -38,9 +46,9 @@ class PageItemsTagLib extends AbstractTaglib {
     }
 
     /**
-     * Renderiza um item do submenu
+     * Renders a submenu item.
      *
-     * @attr position Define a posição do item no submenu.<br> Valores possíveis: left, right. <br>Default: left
+     * @attr position Defines the position to the item.<br> Accepted values: left, right. <br>Default: left
      */
     def submenuItem = { attrs, body ->
         def template = getTemplatePath('submenus/submenuItem')
@@ -49,7 +57,45 @@ class PageItemsTagLib extends AbstractTaglib {
     }
 
     /**
-     * Renderiza uma barra lateral
+     * Adds a menu container to the page
+     */
+    def menuContainer = { attrs, body ->
+        def template = getTemplatePath('menus/menuContainer')
+        out << render(template: template.path, model: [body: body()], plugin: template.plugin)
+    }
+
+    /**
+     * Creates a menu inside the menu container. It must be inside a <thmrz:menuContainer> tag.
+     *
+     * @attr class CSS class to use in menu.
+     */
+    def menu = { attrs, body ->
+        def template = getTemplatePath('menus/menu')
+        out << render(template: template.path, model: [body: body(), class: attrs['class']], plugin: template.plugin)
+    }
+
+    /**
+     * Creates a menu item inside a menu. It must be inside a <thmrz:menu> tag.
+     *
+     * @attr class CSS class to use in item.
+     */
+    def menuItem = { attrs, body ->
+        def template = getTemplatePath('menus/menuItem')
+        out << render(template: template.path, model: [body: body(), class: attrs['class']], plugin: template.plugin)
+    }
+
+    /**
+     * Renders the default application menu.
+     *
+     * @attr class CSS class to use in item.
+     */
+    def pageMenus = { attrs, body ->
+        def template = getTemplatePath('menus/pageMenus')
+        out << render(template: template.path, plugin: template.plugin)
+    }
+
+    /**
+     * Renders a sidebar
      */
     def sidebar = { attrs, body ->
         def template = getTemplatePath('sidebar/sidebar')
@@ -57,9 +103,9 @@ class PageItemsTagLib extends AbstractTaglib {
     }
 
     /**
-     * Renderiza um item da barra lateral
+     * Renders a sidebar item.
      *
-     * @attr title Título para ser exibido no quadro
+     * @attr title Title of the sidebar item.
      */
     def sidebarItem = { attrs, body ->
         def template = getTemplatePath('sidebar/sidebarItem')

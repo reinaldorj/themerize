@@ -1,5 +1,3 @@
-<content tag="submenu">
-    <div class="submenu clearfix">
-        ${raw(body)}
-    </div>
-</content>
+<div class="well clearfix">
+    ${raw(body)}
+</div>

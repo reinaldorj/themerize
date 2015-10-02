@@ -11,110 +11,126 @@ This plugin contains a series of tags and template files that you can use to cus
 #### `<thmrz:resources />`
 This tag will include the Javascript and CSS resources to your page. It's recommended to use it in your `grails-app/views/layouts/main.gsp` file (or any other layout files you use).
 
+#### `<thmrz:breadcrumbsContainer />`
+Renders a container for rendering breadcrumbs. No body is nedded.
+
 #### `<thmrz:breadcrumbs />`
-This tag will render a container which will be used for rendering breadcrumbs. You must put `<thmrz:breadcrumbItem>`s tags inside it's body.
+Anything inside it's body will be putted inside `<thmrz:breadcrumbsContainer />`. You must put `<thmrz:breadcrumbItem />` in it's body. 
 
 #### `<thmrz:breadcrumbItem />`
-This tag will render a breadcrumb item for your page. You must put this tag inside `<thmrz:breadcrumbs>` body.
+Renders a breadcrumb item for your page. It must be inside `<thmrz:breadcrumbs>` body.
 
 #### `<thmrz:submenu />`
-This tag will render a container which will be used for rendering submenus into your views. You must put `<thmrz:submenuItem>`s tags inside it's body.
+Renders a container which will be used for rendering submenus into your views. You must put `<thmrz:submenuItem>`s tags inside it's body.
 
 #### `<thmrz:submenuItem />`
-This tag will render a submenu item for your page. You must put this tag inside `<thmrz:submenu>` body.
+Renders a submenu item for your page. It must be inside `<thmrz:submenu>` body.
 
 #### `<thmrz:sidebar />`
-This tag will render a container which will be used for rendering sidebars into your views. You must put `<thmrz:sidebarItem>`s tags inside it's body.
+Renders a container which will be used for rendering sidebars into your views. You must put `<thmrz:sidebarItem>`s tags inside it's body.
 
 #### `<thmrz:sidebarItem />`
-This tag will render a sidebar item for your page. You must put this tag inside `<thmrz:sidebar>` body. 
+Renders a sidebar item for your page. It must be inside `<thmrz:sidebar>` body. 
 
 #### `<thmrz:sortableColumn />`
-This tag will render a sortable column, just like `<g:sortableColumn>`, but stylized. 
+Renders a sortable column, just like `<g:sortableColumn>`, but stylized. 
 
 #### `<thmrz:paginate />`
-This tag will render a paginate element, just like `<g:paginate>`, but stylized. 
+Renders a paginate element, just like `<g:paginate>`, but stylized. 
 
 #### `<thmrz:textField />`
-This tag will render a textField element using the style of your current theme. 
+Renders a textField element using the style of your current theme. 
 
 #### `<thmrz:textFieldLabel />`
-This tag will render a textField element with label using the style of your current theme. 
+Renders a textField element with label using the style of your current theme. 
 
 #### `<thmrz:textArea />`
-This tag will render a textField element using the style of your current theme. 
+Renders a textField element using the style of your current theme. 
 
 #### `<thmrz:textAreaLabel />`
-This tag will render a textArea element with label using the style of your current theme. 
+Renders a textArea element with label using the style of your current theme. 
 
 #### `<thmrz:dateField />`
-This tag will render a dateField element using the style of your current theme.   
+Renders a dateField element using the style of your current theme.   
 It uses [Bootstrap Datetimepicker](https://tarruda.github.io/bootstrap-datetimepicker/). You can use it's documentation to make custom date formatting.
 
 #### `<thmrz:dateFieldLabel />`
-This tag will render a dateField element with label using the style of your current theme. 
+Renders a dateField element with label using the style of your current theme. 
 
 #### `<thmrz:select />`
-This tag will render a select element using the style of your current theme. 
+Renders a select element using the style of your current theme. 
 
 #### `<thmrz:selectLabel />`
-This tag will render a select element with label using the style of your current theme. 
+Renders a select element with label using the style of your current theme. 
 
 #### `<thmrz:localeSelect />`
-This tag will render a localeSelect element using the style of your current theme. 
+Renders a localeSelect element using the style of your current theme. 
 
 #### `<thmrz:localeSelectLabel />`
-This tag will render a localeSelect element with label using the style of your current theme. 
+Renders a localeSelect element with label using the style of your current theme. 
 
 #### `<thmrz:timeZoneSelect />`
-This tag will render a timeZoneSelect element using the style of your current theme. 
+Renders a timeZoneSelect element using the style of your current theme. 
 
 #### `<thmrz:timeZoneSelectLabel />`
-This tag will render a timeZoneSelect element with label using the style of your current theme. 
+Renders a timeZoneSelect element with label using the style of your current theme. 
 
 #### `<thmrz:currencySelect />`
-This tag will render a currencySelect element using the style of your current theme. 
+Renders a currencySelect element using the style of your current theme. 
 
 #### `<thmrz:currencySelectLabel />`
-This tag will render a currencySelect element with label using the style of your current theme. 
+Renders a currencySelect element with label using the style of your current theme. 
 
 #### `<thmrz:field />`
-This tag will render a field element using the style of your current theme. 
+Renders a field element using the style of your current theme. 
 
 #### `<thmrz:fieldLabel />`
-This tag will render a field element with label using the style of your current theme. 
+Renders a field element with label using the style of your current theme. 
 
 #### `<thmrz:checkBox />`
-This tag will render a checkBox element using the style of your current theme. 
+Renders a checkBox element using the style of your current theme. 
 
 #### `<thmrz:checkBoxLabel />`
-This tag will render a checkBox element with label using the style of your current theme. 
+Renders a checkBox element with label using the style of your current theme. 
 
 #### `<thmrz:passwordField />`
-This tag will render a passwordField element using the style of your current theme. 
+Renders a passwordField element using the style of your current theme. 
 
 #### `<thmrz:passwordFieldLabel />`
-This tag will render a passwordField element with label using the style of your current theme. 
+Renders a passwordField element with label using the style of your current theme. 
 
 #### `<thmrz:uploadField />`
-This tag will render a uploadField element using the style of your current theme. 
+Renders a uploadField element using the style of your current theme. 
 
 #### `<thmrz:uploadFieldLabel />`
-This tag will render a uploadField element with label using the style of your current theme. 
+Renders a uploadField element with label using the style of your current theme. 
 
 #### `<thmrz:submitButton />`
-This tag will render a submit button element using the style of your current theme. 
+Renders a submit button element using the style of your current theme. 
 
 #### `<thmrz:resetButton />`
-This tag will render a reset button element using the style of your current theme. 
+Renders a reset button element using the style of your current theme. 
 
 #### `<thmrz:linkButton />`
-This tag will render a link styled like a button using the style of your current theme.
+Renders a link styled like a button using the style of your current theme.
 
 #### `<thmrz:button />`
-This tag will render a simple button element using the style of your current theme.
+Renders a simple button element using the style of your current theme.
 
-## 3. Customizing
+#### `<thmrz:menuContainer />`
+Renders a menu container in the page.
+
+#### `<thmrz:menu />`
+Renders a menu in the page. It must be inside `<thmrz:menuContainer />` tag.
+
+#### `<thmrz:menuItem />`
+Renders a menu item in the page. It must be inside `<thmrz:menu />` tag.
+
+## 3. Default Layout
+This plugin contains a default layout that you can use in your pages. To use it, change the `<meta name="layout" content="main">` to `<meta name="layout" content="thmrz">` in your GSPs.  
+This layout contains a blank menu container. To populate it, just create a template called `_pageMenus.gsp` inside `grails-app/views/themerize/menus` and put `<thmrz:menu>` and `<thmrz:menuItem>` tags inside it.  
+
+## 4. Customizing
 If you want, you can override the template gsps used to render elements. They need to be under `grails-app/views/themerize`. Just create this folder and implement the files as you need. You'll want to implement these files:   
 `breadcrumbs/_breadcrumbs.gsp`   
 `breadcrumbs/_breadcrumbItem.gsp`   
