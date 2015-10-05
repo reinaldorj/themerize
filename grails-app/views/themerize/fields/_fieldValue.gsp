@@ -1,0 +1,1 @@
+<%attrs.class = attrs.class ?: ''; attrs.class += ' form-control-static'%><p class="${attrs.class}">${attrs.value}</p>

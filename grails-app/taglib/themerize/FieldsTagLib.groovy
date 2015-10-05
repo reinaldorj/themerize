@@ -265,6 +265,33 @@ class FieldsTagLib extends AbstractTaglib {
     }
 
     /**
+     * Renders a readonly value as a text with label
+     *
+     * @attr label
+     * @attr id
+     * @attr value
+     * @attr class
+     * @attr style
+     */
+    def fieldValueLabel = { attrs, body ->
+        def template = getTemplatePath('fields/fieldValueLabel')
+        out << render(template: template.path, model: [label: attrs.remove('label'), args: attrs.remove('args'), attrs: attrs, body: body], plugin: template.plugin)
+    }
+
+    /**
+     * Renders a readonly value as a text
+     *
+     * @attr id
+     * @attr value
+     * @attr class
+     * @attr style
+     */
+    def fieldValue = { attrs, body ->
+        def template = getTemplatePath('fields/fieldValue')
+        out << render(template: template.path, model: [attrs: attrs, body: body], plugin: template.plugin)
+    }
+
+    /**
      * Renderiza um campo checkbox do tema instalado
      *
      * @attr label

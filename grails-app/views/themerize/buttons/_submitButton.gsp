@@ -1,1 +1,1 @@
-<% attrs.class = attrs.class ?: 'btn btn-success btn-quirk btn-wide mr5'; attrs.value = attrs.value ?: message(code: 'default.button.create.label', default: 'Create') %> ${raw(g.submitButton(attrs, body))}
+<% attrs.class = attrs.class ?: "btn btn-${attrs.remove('type')} btn-quirk btn-wide mr5"; attrs.value = attrs.value ?: message(code: 'default.button.create.label', default: 'Create') %> ${raw(g.submitButton(attrs, body))}

@@ -11,10 +11,12 @@ class ButtonsTagLib extends AbstractTaglib {
      * @attr style Estilo a ser aplicado
      * @attr value Texto do botão
      * @attr title Texto alternativo do botão
+     * @attr type Button type. Allowed values: default, primary, success, warning, danger, info. Default: success
      */
     def submitButton = {attrs, body ->
         def template = getTemplatePath('buttons/submitButton')
         attrs.name = "_action_${attrs.remove('action')}"
+        attrs.type = attrs.type ?: 'success'
         out << render(template: template.path, model: [attrs: attrs, body: body], plugin: template.plugin)
     }
 

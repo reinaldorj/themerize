@@ -297,4 +297,12 @@ class PageItemsTagLib extends AbstractTaglib {
 
         writer << '</ul>'
     }
+
+    /**
+     * Renders a container for messages
+     */
+    def messages = {attrs ->
+        def template = getTemplatePath('messages/messages')
+        out << render(template: template.path, model: [bean: attrs.bean], plugin: template.plugin)
+    }
 }

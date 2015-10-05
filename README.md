@@ -87,6 +87,12 @@ Renders a field element using the style of your current theme.
 #### `<thmrz:fieldLabel />`
 Renders a field element with label using the style of your current theme. 
 
+#### `<thmrz:fieldValue />`
+Renders a readonly value as a text 
+
+#### `<thmrz:fieldValueLabel />`
+Renders a readonly value with label as a text
+
 #### `<thmrz:checkBox />`
 Renders a checkBox element using the style of your current theme. 
 
@@ -126,6 +132,9 @@ Renders a menu in the page. It must be inside `<thmrz:menuContainer />` tag.
 #### `<thmrz:menuItem />`
 Renders a menu item in the page. It must be inside `<thmrz:menu />` tag.
 
+#### `<thmrz:messages />`
+Renders a container for error, alert, success or any ohter kind of messages.
+
 ## 3. Default Layout
 This plugin contains a default layout that you can use in your pages. To use it, change the `<meta name="layout" content="main">` to `<meta name="layout" content="thmrz">` in your GSPs.  
 This layout contains a blank menu container. To populate it, just create a template called `_pageMenus.gsp` inside `grails-app/views/themerize/menus` and put `<thmrz:menu>` and `<thmrz:menuItem>` tags inside it.  
@@ -145,6 +154,8 @@ If you want, you can override the template gsps used to render elements. They ne
 `fields/_dateFieldLabel.gsp`   
 `fields/_field.gsp`   
 `fields/_fieldLabel.gsp`   
+`fields/_fieldValue.gsp`   
+`fields/_fieldValueLabel.gsp`   
 `fields/_localeSelect.gsp`   
 `fields/_localeSelectLabel.gsp`   
 `fields/_passwordField.gsp`   
@@ -159,6 +170,7 @@ If you want, you can override the template gsps used to render elements. They ne
 `fields/_timeZoneSelectLabel.gsp`   
 `fields/_uploadField.gsp`   
 `fields/_uploadFieldLabel.gsp`   
+`messages/_messages.gsp`   
 `paginate/_currentStep.gsp`   
 `paginate/_firstStep.gsp`   
 `paginate/_lastStep.gsp`   
