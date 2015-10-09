@@ -1,7 +1,5 @@
 #!/bin/bash
-chmod +x grailsw
-./grailsw clean
+set -e
+rm -rf *.zip
 ./grailsw refresh-dependencies --non-interactive
-./grailsw compile
-./grailsw compile --gsp
-./grailsw test-app
+./grailsw test-app --non-interactive
