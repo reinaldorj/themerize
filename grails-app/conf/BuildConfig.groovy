@@ -10,6 +10,9 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenLocal()
         mavenCentral()
+
+        //NÃO COMMITAR ISSO!!
+        mavenRepo id:"Artifactory" , url:"http://artifactory.willcrisis.com/artifactory/repo"
     }
 
     plugins {
@@ -20,3 +23,7 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.11.1"
     }
 }
+
+//NÃO COMMITAR ISSO!!
+grails.project.repos.default = "willcrisis"
+grails.project.groupId = "com.willcrisis.plugins"
