@@ -1,6 +1,3 @@
 language: groovy
-jdk:
-- oraclejdk7
-before_script:
-- rm -rf target
-script: ./travis-build.sh
+before-script: ./grailsw clean && ./grailsw compile
+script: ./grailsw test-app
