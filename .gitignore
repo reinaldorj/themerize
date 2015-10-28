@@ -4,9 +4,13 @@
 *.log
 .idea
 .settings
+.classpath
+cobertura.ser
 grails-themerize-*.zip
 grails-themerize-*.zip.sha1
 plugin.xml
-target
+target/
+out/
+build/
 target-eclipse
 web-app

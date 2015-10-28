@@ -1,5 +1,5 @@
 class ThemerizeGrailsPlugin {
-    def version = "0.1.0"
+    def version = "0.1.1"
     def grailsVersion = "2.5 > *"
     def title = "Themerize"
     def author = "Willian Krause"
