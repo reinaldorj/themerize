@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/willcrisis/themerize.svg?branch=master)](https://travis-ci.org/willcrisis/themerize)
+
 # Themerize
 A Grails plugin that allows you to easily develop themes to your app. 
 
